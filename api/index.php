@@ -8,7 +8,7 @@ if (!isset($_GET['token']) || $_GET['token'] !== $requiredToken) {
     http_response_code(403); // Forbidden
     die('<h1>403 Forbidden</h1><p>Access denied. Invalid or missing token.</p>');
 }
-
+// --- YOUR SECRET
 // Check if a script URL was provided
 if (isset($_GET['script_url'])) {
     $scriptUrl = $_GET['script_url']; // Vercel automatically decodes it
